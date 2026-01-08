@@ -108,6 +108,11 @@ task fatJar(type: Jar) {
     with jar
 }
 
+// we first need to fix the errors
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.additionalParameters = ["-nowarn"]
+}
+
 //task spec(dependsOn: ['testClasses'], type: JavaExec) {
 //  mainClass = 'org.scalatest.tools.Runner'
 //  args = ['-R', 'build/classes/scala/test', '-o']
