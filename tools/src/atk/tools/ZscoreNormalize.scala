@@ -15,7 +15,7 @@ object ZscoreNormalize extends Tool {
   def main(args: Array[String]): Unit = {
 
     val parser = new scopt.OptionParser[Config]("java -jar atk.jar zscore") {
-      opt[File]('i', "input").required ().action { (x, c) => c.copy(input = x) }.text ("Input data")
+      opt[File]('i', "input").required().action { (x, c) => c.copy(input = x) }.text ("Input data")
       opt[File]('o', "output").action { (x, c) => c.copy(output = x) }.text ("Output file")
       opt[Int]('c', "column").action { (x, c) => c.copy(column = x) }.text ("Column from which to extract and replace values with z-scores. Default = " + new Config().column)
 
