@@ -120,7 +120,7 @@ trait Tool extends Lines with LoggingTrait{
   def generatorInfo(config: AnyRef = null): String = {
     "# Generated with    " + classInfo() + "\n" +
       "# Source code in    " + classFileName() + "\n" +
-      "# Binary in         " + executeEnvironment + "\n" +
+      "# Binary in         " + executeEnvironment() + "\n" +
       "# Date              " + new Date() + "\n" +
       "# Working directory " + new File(".").getAbsolutePath() + "\n#\n" +
       "# Please contact Thomas Abeel for problems or questions:\n#\tt.abeel@tudelft.nl\n#\n" +

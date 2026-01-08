@@ -12,8 +12,8 @@ object FisherList extends Tool{
   def main(args: Array[String]): Unit = {
 
     val parser = new scopt.OptionParser[Config]("java -jar atk.jar fisher-list") {
-      opt[File]('i', "input") required () action { (x, c) => c.copy(input = x) } text ("Input file. ")
-      opt[File]('o', "output") action { (x, c) => c.copy(output = x) } text ("Output file")
+      opt[File]('i', "input").required().action{ (x, c) => c.copy(input = x) }.text("Input file. ")
+      opt[File]('o', "output").action{ (x, c) => c.copy(output = x) }.text("Output file")
       
     }
     parser.parse(args, Config()) map { config =>
@@ -50,7 +50,7 @@ object FisherList extends Tool{
     val sum2=triplets.map(_._2._2).sum
     
     val pw=new PrintWriter(config.output)
-    pw.println(generatorInfo)
+    pw.println(generatorInfo())
     pw.println("##")
     pw.println("## label\tX\tY\tn11\tn12\tn21\tn22\tbonferroni(p)")
     pw.println("##")

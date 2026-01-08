@@ -22,7 +22,7 @@ package atk.collection
  *
  */
 trait DistinctBy {
-  implicit def seq2Distinct[T, C[T] <: Seq[T]](tees: C[T]) = new {
+  implicit def seq2Distinct[T, C[T] <: Seq[T]](tees: C[T]):Object = new {
     import collection.generic.CanBuildFrom
     import collection.mutable.{ HashSet => MutableHashSet }
 

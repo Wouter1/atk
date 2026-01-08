@@ -6,18 +6,18 @@ object ATKConsole {
 
     if (args.length == 0) {
 
-      listInstructions
+      listInstructions()
     } else {
       args(0) match {
-        case "list" => listInstructions
-        case "help" => listInstructions
+        case "list" => listInstructions()
+        case "help" => listInstructions()
         case "histogram" => Histogram.main(args.drop(1))
         case "string-replace" =>StringReplace.main(args.drop(1))
         case "fisher-list"=>FisherList.main(args.drop(1))
         case "scatter" => Scatter.main(args.drop(1))
         case "scatter-xy" =>ScatterXY.main(args.drop(1))
         case "zscore" => ZscoreNormalize.main(args.drop(1))
-        case _ => listInstructions
+        case _ => listInstructions()
       }
     }
 
