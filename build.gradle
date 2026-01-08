@@ -7,10 +7,22 @@
  */
 
 // Apply the java-library plugin to add support for Java Library
-apply plugin: 'java-library'
-apply plugin: 'java'
-apply plugin: 'scala'
-apply plugin: 'eclipse'
+//apply plugin: 'java-library'
+//apply plugin: 'java'
+//apply plugin: 'scala'
+//apply plugin: 'eclipse'
+
+// above seems old-school gradle. 
+plugins {
+    id("java-library")
+    id("java")
+    id("scala")
+    id("eclipse")
+}
+
+scala {
+    scalaVersion = "3.6.3"
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -18,7 +30,7 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     //jcenter()
     
-    // jcenter is down. Try maven central.
+    // jcenter n.a., replace with maven central.
     mavenCentral()
     
      flatDir {
@@ -31,24 +43,18 @@ repositories {
 sourceSets {
     main {
         java {
-            srcDir 'bsd/src'
-            srcDir 'gpl/src'
-            srcDir 'tools/src'
-            srcDir 'src'
+            srcDirs = [ 'bsd/src','gpl/src', 'tools/src','src' ]
         }
         scala {
-            srcDir 'bsd/src'
-            srcDir 'gpl/src'
-            srcDir 'tools/src'
-            srcDir 'src'
+            srcDirs = ['bsd/src', 'gpl/src', 'tools/src', 'src']
         }
     }
     test{
     	java{
-    		srcDir 'test/src'
+    		srcDirs = [ 'test/src' ]
     	}
     	scala{
-    		srcDir 'test/src'
+    		srcDirs = [ 'test/src' ]
     	}
     }
  }
@@ -80,10 +86,11 @@ dependencies {
 	testImplementation("junit:junit:4.13.1") // 4.12 is vulnerable
 	
 	//compile 'org.scala-lang:scala-library:2.12.3'
-	implementation("org.scala-lang:scala3-library_3:3.8.0-RC5")//n.a., relocated
-	
+	//implementation("org.scala-lang:scala3-library_3:3.8.0-RC5")//n.a., relocated
+    implementation("org.scala-lang:scala3-library_3:3.6.3")
     //compile 'org.scalatest:scalatest_2.12:3.0.5' 
-	testImplementation("org.scalatest:scalatest_2.12:3.3.0-alpha.2") // closest match
+	//testImplementation("org.scalatest:scalatest_2.12:3.3.0-alpha.2") // closest match
+	implementation("org.scalatest:scalatest_3:3.3.0-alpha.2")
 }
 
 task fatJar(type: Jar) {
@@ -100,9 +107,10 @@ task fatJar(type: Jar) {
     }
     with jar
 }
-task spec(dependsOn: ['testClasses'], type: JavaExec) {
-  mainClass = 'org.scalatest.tools.Runner'
-  args = ['-R', 'build/classes/scala/test', '-o']
-  classpath = sourceSets.test.runtimeClasspath
-}
+
+//task spec(dependsOn: ['testClasses'], type: JavaExec) {
+//  mainClass = 'org.scalatest.tools.Runner'
+//  args = ['-R', 'build/classes/scala/test', '-o']
+//  classpath = sourceSets.test.runtimeClasspath
+//}
 
