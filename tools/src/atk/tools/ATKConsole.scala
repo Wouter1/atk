@@ -23,7 +23,7 @@ object ATKConsole {
 
   }
 
-  def listInstructions() {
+  def listInstructions():Unit = {
     println("Usage:java -jar atk.jar [instruction] [instruction options...]")
     println("Instructions:")
     println("\thistogram          Create a histogram plot from data in file")

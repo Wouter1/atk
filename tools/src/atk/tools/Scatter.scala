@@ -47,7 +47,7 @@ object Scatter extends Tool with ScatterTrait {
     }
   }
 
-  private def scatter(config: Config) {
+  private def scatter(config: Config): Unit = {
 
     val data = tColumns(List(0, 1), tLines(config.input)).map { list => list(0).toDouble -> list(1).toDouble }
 

@@ -44,7 +44,7 @@ object Histogram extends Tool {
     }
   }
 
-  private def histo(config: HistogramConfig) {
+  private def histo(config: HistogramConfig): Unit =  {
     assume(config.input.exists(), "Input file does not exist: " + config.input)
     val values = tLines(config.input).map { f =>
       val v = f.split("\t")(config.column).toDouble
@@ -96,7 +96,7 @@ object Histogram extends Tool {
 
   }
 
-  def plot(values: List[Double], config: HistogramConfig) {
+  def plot(values: List[Double], config: HistogramConfig): Unit = {
     val input = if (config.nobin) {
       values.groupBy { identity }.mapValues(_.size.toDouble)
     } else {

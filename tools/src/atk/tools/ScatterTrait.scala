@@ -15,7 +15,7 @@ import be.abeel.jfreechart.JFreeChartWrapper
 import org.jfree.chart.plot.PlotOrientation
 
 trait ScatterTrait {
-  def scatterPlot(data: List[(Double, Double)], xLabel: String, yLabel: String, output: String, minX:Double=Double.MinValue, maxX:Double=Double.MaxValue, minY:Double=Double.MinValue, maxY:Double=Double.MaxValue) {
+  def scatterPlot(data: List[(Double, Double)], xLabel: String, yLabel: String, output: String, minX:Double=Double.MinValue, maxX:Double=Double.MaxValue, minY:Double=Double.MinValue, maxY:Double=Double.MaxValue): Unit = {
 
     val arr = Array.ofDim[Array[Double]](2)
     arr(0) = Array.ofDim(data.size)

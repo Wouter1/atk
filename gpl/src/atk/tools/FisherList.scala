@@ -22,7 +22,7 @@ object FisherList extends Tool{
     }
 
   }
-  def fishlist(config: Config) {
+  def fishlist(config: Config): Unit =  {
 
     //Takes a list of triplets consisting of a label and a pair of values and checks whether it's different from the population of all pairs.
     
@@ -55,8 +55,8 @@ object FisherList extends Tool{
     pw.println("## label\tX\tY\tn11\tn12\tn21\tn22\tbonferroni(p)")
     pw.println("##")
     for((label,(x,y))<-triplets){
-    	val n11=x
-    	val n12=y
+        val n11=x
+        val n12=y
         val n21=sum1-x
         val n22=sum2-y
         val p=FishersExactTest.fishersExactTest(n11, n12, n21, n22)(0)

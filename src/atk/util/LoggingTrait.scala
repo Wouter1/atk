@@ -7,7 +7,7 @@ trait LoggingTrait {
   
   setDebugLevel(Level.INFO)
   
-  def setDebugLevel(newLvl: Level) {
+  def setDebugLevel(newLvl: Level):Unit= {
     val rootLogger = LogManager.getLogManager().getLogger("");
     val handlers = rootLogger.getHandlers();
     rootLogger.setLevel(newLvl);

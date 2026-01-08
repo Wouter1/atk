@@ -2,7 +2,7 @@ package atk.compbio
 
 object DNAHash {
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     hash("ACGGTGCGA")
 
     hash("AACGGTGCGA")

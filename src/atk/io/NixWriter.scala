@@ -14,11 +14,11 @@ class NixWriter(f: String,config:AnyRef=null,noheader:Boolean=false) extends Pri
   if(!noheader)
     println(generatorInfo(config))
   
-  override def println(str: String) {
+  override def println(str: String): Unit= {
     print(str + "\n")
   }
 
-  override def close(){
+  override def close(): Unit = {
     if(!noheader)
       println("## This analysis finished " + LocalDateTime.now())
     super.close

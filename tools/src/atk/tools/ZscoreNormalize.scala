@@ -26,7 +26,7 @@ object ZscoreNormalize extends Tool {
     }
 
   }
-  private def zscore(config: Config) {
+  private def zscore(config: Config): Unit= {
 
     val summary=new SummaryStatistics
     

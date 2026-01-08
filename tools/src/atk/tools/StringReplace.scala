@@ -24,7 +24,7 @@ object StringReplace extends Tool {
     }
   }
 
-  def replace(config: Config) {
+  def replace(config: Config): Unit = {
 
     val in = Source.fromFile(config.input).getLines.toList.mkString("\n")
     val replace = tMap(tLines(config.replace),keyColumn=0,valueColumn=1,limitSplit=false)

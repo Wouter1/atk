@@ -34,7 +34,7 @@ object URLCache {
 
   private var lastQuery: Long = 0
 
-  def age(url: String, encoding: String = "ISO-8859-1", aging: Long) {
+  def age(url: String, encoding: String = "ISO-8859-1", aging: Long):Unit= {
     val hash = md5key(url, encoding)
 
     val cached = new File(".url-cache/" + hash + ".blob")
@@ -44,7 +44,7 @@ object URLCache {
     }
   }
 
-  def delete(urlKey:String, encoding: String = "ISO-8859-1"){
+  def delete(urlKey:String, encoding: String = "ISO-8859-1"): Unit= {
      val hash = md5key(urlKey, encoding)
      val cached = new File(".url-cache/" + hash + ".blob")
      cached.delete()
@@ -130,7 +130,7 @@ object URLCache {
   private class DefaultTrustManager extends X509TrustManager {
 
     override def checkClientTrusted(arg0: Array[X509Certificate], arg1: String) = {}
-    override def checkServerTrusted(arg0: Array[X509Certificate], arg1: String) {}
+    override def checkServerTrusted(arg0: Array[X509Certificate], arg1: String) = {}
 
     override def getAcceptedIssuers(): Array[X509Certificate] = null
   }

@@ -7,7 +7,7 @@ package atk.compbio
  */
 class DNAString(str: String) {
 
-  def this(arr:Array[Byte]){
+  def this(arr:Array[Byte]) = {
    this(new String(arr)) 
   }
   
@@ -76,7 +76,7 @@ class DNAString(str: String) {
   }
 
   /* Zero based setter for the sequence */
-  private def set(pos: Int, c: Char) {
+  private def set(pos: Int, c: Char):Unit= {
     var coded = encode(c);
     var mask = 15
     if (pos % 2 == 1) {

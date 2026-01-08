@@ -47,7 +47,7 @@ object ScatterXY extends Tool with ScatterTrait{
     }
   }
 
-  private def scatter(config: Config) {
+  private def scatter(config: Config): Unit = {
     assume(config.inputX.exists(), "Input file does not exist: " + config.inputX)
     assume(config.inputY.exists(), "Input file does not exist: " + config.inputY)
 
