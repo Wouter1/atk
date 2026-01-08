@@ -27,15 +27,15 @@ object Histogram extends Tool {
   def main(args: Array[String]): Unit = {
 
     val parser = new scopt.OptionParser[HistogramConfig]("java -jar atk.jar histogram") {
-      opt[File]('i', "input") required () action { (x, c) => c.copy(input = x) } text ("Input data")
-      opt[String]('o', "output") action { (x, c) => c.copy(outputPrefix = x) } text ("Output prefix")
-      opt[String]('x', "x-label") action { (x, c) => c.copy(x = x) } text ("X-axis label")
-      opt[String]('y', "y-label") action { (x, c) => c.copy(y = x) } text ("Y-axis label")
-      opt[Int]('c', "column") action { (x, c) => c.copy(column = x) } text ("Column from which to extract values. Default = 0")
-      opt[Int]("stdev-limit") action { (x, c) => c.copy(limit = x) } text ("Maximum standard devitations on domain. Default = unlimited")
-      opt[Unit]("log") action { (x, c) => c.copy(log = true) } text ("Take log of values. Default = false")
-      opt[Unit]("tabulated") action { (x, c) => c.copy(tab = true) } text ("Export tab-delimited file with data in histogram")
-      opt[Unit]("no-bin") action { (x, c) => c.copy(nobin = true) } text ("Do not automagically bin data")
+      opt[File]('i', "input").required().action { (x, c) => c.copy(input = x) }.text ("Input data")
+      opt[String]('o', "output").action{ (x, c) => c.copy(outputPrefix = x) }.text ("Output prefix")
+      opt[String]('x', "x-label").action{ (x, c) => c.copy(x = x) }.text ("X-axis label")
+      opt[String]('y', "y-label").action{ (x, c) => c.copy(y = x) }.text ("Y-axis label")
+      opt[Int]('c', "column").action { (x, c) => c.copy(column = x) }.text ("Column from which to extract values. Default = 0")
+      opt[Int]("stdev-limit").action { (x, c) => c.copy(limit = x) }.text ("Maximum standard devitations on domain. Default = unlimited")
+      opt[Unit]("log").action { (x, c) => c.copy(log = true) }.text ("Take log of values. Default = false")
+      opt[Unit]("tabulated").action { (x, c) => c.copy(tab = true) }.text ("Export tab-delimited file with data in histogram")
+      opt[Unit]("no-bin").action { (x, c) => c.copy(nobin = true) }.text ("Do not automagically bin data")
      
     }
     parser.parse(args, HistogramConfig()) map { config =>
@@ -90,7 +90,10 @@ object Histogram extends Tool {
     println("h: " + h)
     val range = h
     println("range= " + range)
-    val binned = cleanData.groupBy(g => (g / range).toInt).mapValues(_.size).map(f => (f._1 * range, f._2.toDouble / cleanData.size))
+    val binned:Map[Double,Double] = cleanData.groupBy(g => (g / range).toInt)
+    	.map{ case (k,v) => ( k*range, v.size.toDouble / cleanData.size) }
+    	// mapValues is lazy and does not return the correct type.
+    	//.mapValues(_.size).map(f => (f._1 * range, f._2.toDouble / cleanData.size))
 
     binned
 

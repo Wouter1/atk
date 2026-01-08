@@ -30,15 +30,15 @@ object Scatter extends Tool with ScatterTrait {
 
     val parser = new scopt.OptionParser[Config]("java -jar atk.jar scatter") {
       val default = new Config()
-      opt[File]('i', "input") required () action { (x, c) => c.copy(input = x) } text ("Input data. This should be a two column file with numberic values.")
-      opt[File]('o', "output") action { (x, c) => c.copy(output = x) } text ("Output file")
-      opt[String]('x', "x-label") action { (x, c) => c.copy(x = x) } text ("X-axis label")
-      opt[String]('y', "y-label") action { (x, c) => c.copy(y = x) } text ("Y-axis label")
-      opt[Double]("x-min") action { (x, c) => c.copy(minX = x) } text ("Minimum value to display on the X-axis")
-      opt[Double]("y-min") action { (x, c) => c.copy(minY = x) } text ("Minimum value to display on the Y-axis")
-      opt[Double]("x-max") action { (x, c) => c.copy(maxX = x) } text ("Maximum value to display on the X-axis")
-      opt[Double]("y-max") action { (x, c) => c.copy(maxY = x) } text ("Maximum value to display on the Y-axis")
-      opt[Unit]("log") action { (x, c) => c.copy(log = true) } text ("Take log of values. Default = " + default.log)
+      opt[File]('i', "input").required().action { (x, c) => c.copy(input = x) }.text ("Input data. This should be a two column file with numberic values.")
+      opt[File]('o', "output").action { (x, c) => c.copy(output = x) }.text ("Output file")
+      opt[String]('x', "x-label").action { (x, c) => c.copy(x = x) }.text ("X-axis label")
+      opt[String]('y', "y-label").action { (x, c) => c.copy(y = x) }.text ("Y-axis label")
+      opt[Double]("x-min").action { (x, c) => c.copy(minX = x) }.text ("Minimum value to display on the X-axis")
+      opt[Double]("y-min").action { (x, c) => c.copy(minY = x) }.text ("Minimum value to display on the Y-axis")
+      opt[Double]("x-max").action { (x, c) => c.copy(maxX = x) }.text ("Maximum value to display on the X-axis")
+      opt[Double]("y-max").action { (x, c) => c.copy(maxY = x) }.text ("Maximum value to display on the Y-axis")
+      opt[Unit]("log").action { (x, c) => c.copy(log = true) }.text ("Take log of values. Default = " + default.log)
 
     }
     parser.parse(args, Config()) map { config =>

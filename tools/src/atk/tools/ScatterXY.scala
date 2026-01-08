@@ -30,15 +30,15 @@ object ScatterXY extends Tool with ScatterTrait{
 
     val parser = new scopt.OptionParser[Config]("java -jar atk.jar scatter-XY") {
       val default = new Config()
-      opt[File]('x', "x-input") required () action { (x, c) => c.copy(inputX = x) } text ("Input data X, keys must match Y")
-      opt[File]('y', "y-input") required () action { (x, c) => c.copy(inputY = x) } text ("Input data Y, keys must match X")
-      opt[File]('o', "output") action { (x, c) => c.copy(output = x) } text ("Output file")
-      opt[String]("x-label") action { (x, c) => c.copy(x = x) } text ("X-axis label")
-      opt[String]("y-label") action { (x, c) => c.copy(y = x) } text ("Y-axis label")
-      opt[Int]("value-column") action { (x, c) => c.copy(valueColumn = x) } text ("Column from which to extract values. Default = " + default.valueColumn)
-      opt[Int]("key-column") action { (x, c) => c.copy(keyColumn = x) } text ("Column from which to extract keys. Default = " + default.keyColumn)
-      opt[Double]("missing-value") action { (x, c) => c.copy(missing = x) } text ("Value to use for missing entries. Default = " + default.missing)
-      opt[Unit]("log") action { (x, c) => c.copy(log = true) } text ("Take log of values. Default = " + default.log)
+      opt[File]('x', "x-input").required ().action { (x, c) => c.copy(inputX = x) }.text ("Input data X, keys must match Y")
+      opt[File]('y', "y-input").required ().action { (x, c) => c.copy(inputY = x) }.text ("Input data Y, keys must match X")
+      opt[File]('o', "output").action { (x, c) => c.copy(output = x) }.text ("Output file")
+      opt[String]("x-label").action { (x, c) => c.copy(x = x) }.text ("X-axis label")
+      opt[String]("y-label").action { (x, c) => c.copy(y = x) }.text ("Y-axis label")
+      opt[Int]("value-column").action { (x, c) => c.copy(valueColumn = x) }.text ("Column from which to extract values. Default = " + default.valueColumn)
+      opt[Int]("key-column").action { (x, c) => c.copy(keyColumn = x) }.text ("Column from which to extract keys. Default = " + default.keyColumn)
+      opt[Double]("missing-value").action { (x, c) => c.copy(missing = x) }.text ("Value to use for missing entries. Default = " + default.missing)
+      opt[Unit]("log"). action { (x, c) => c.copy(log = true) }.text ("Take log of values. Default = " + default.log)
 
     }
     parser.parse(args, Config()) map { config =>
