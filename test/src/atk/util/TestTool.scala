@@ -11,7 +11,7 @@ object TestTool extends Tool {
 class TestTool extends AnyFunSuite with Tool {
 
   test("test time stamp") {
-    println(timestamp)
+    println(timestamp())
   }
 
   test("testLog") {
