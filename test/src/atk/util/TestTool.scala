@@ -1,14 +1,14 @@
 package atk.util
 
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.*
 
 object TestTool extends Tool {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit= {
 
   }
 }
 
-class TestTool extends FunSuite with Tool {
+class TestTool extends AnyFunSuite with Tool {
 
   test("test time stamp") {
     println(timestamp)

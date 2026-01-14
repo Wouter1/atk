@@ -1,10 +1,10 @@
 package atk.io
 
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.*
 import java.io.PrintWriter
 
 object TestURLCache {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
     URLCache.debug=true
     URLCache.queryWait = 1000
    val us = URLCache.query("https://brickset.com/buy/amazon", URLCache.DAY, cookies = "PreferredCountry2=CountryCode=US&CountryName=United States", key = "brickset_US")
@@ -13,7 +13,7 @@ object TestURLCache {
   }
 }
 
-class TestURLCache extends FunSuite  {
+class TestURLCache extends AnyFunSuite  {
 
   test("testCertificateBypass") {
     println(URLCache.query("https://www.brickwatch.net/de-DE/",bypassCertificates=true))

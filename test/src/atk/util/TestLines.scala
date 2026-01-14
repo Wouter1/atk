@@ -1,16 +1,16 @@
 package atk.util
 
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.*
 import java.io.PrintWriter
 import atk.io.NixWriter
 
 object TestLines extends Lines {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit= {
 
   }
 }
 
-class TestLines extends FunSuite with Lines {
+class TestLines extends AnyFunSuite with Lines {
 
   test("testReadComment") {
     val pw = new PrintWriter("tmp.txt")

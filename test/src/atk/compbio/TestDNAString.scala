@@ -1,13 +1,13 @@
 package atk.compbio
 
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.*
 import org.scalatest.Matchers._
 
 object TestDNAString {
 
 }
 
-class TestDNAString extends FunSuite {
+class TestDNAString extends AnyFunSuite {
   val str = "ACTGATCACCAGACTGATCG"
   val dna = new DNAString(str)
   test("test string") {

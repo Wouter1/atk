@@ -14,14 +14,14 @@
  */
 package atk.util
 
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.*
 import scala.collection.mutable.BitSet
 
 /**
  * THIS IS NOT A PROPER TEST-CASE --> needs assume statements
  */
 
-class TestBitSetTools extends FunSuite {
+class TestBitSetTools extends AnyFunSuite {
 
   test("testToString") {
 
