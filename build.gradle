@@ -40,24 +40,6 @@ repositories {
     
     
 }
-sourceSets {
-    main {
-        java {
-            srcDirs = [ 'bsd/src','gpl/src', 'tools/src','src' ]
-        }
-        scala {
-            srcDirs = ['bsd/src', 'gpl/src', 'tools/src', 'src']
-        }
-    }
-    test{
-    	java{
-    		srcDirs = [ 'test/src' ]
-    	}
-    	scala{
-    		srcDirs = [ 'test/src' ]
-    	}
-    }
- }
 
 dependencies {
 
