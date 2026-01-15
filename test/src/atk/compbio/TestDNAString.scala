@@ -1,7 +1,7 @@
 package atk.compbio
 
 import org.scalatest.funsuite.*
-import org.scalatest.Matchers._
+//import org.scalatest.Matchers._
 
 object TestDNAString {
 
@@ -26,8 +26,8 @@ class TestDNAString extends AnyFunSuite {
 
   test("test oob") {
  
-    an[IndexOutOfBoundsException] should be thrownBy dna.get(-1)
-    an[IndexOutOfBoundsException] should be thrownBy dna.get(dna.size)
+    assertThrows[IndexOutOfBoundsException](dna.get(-1))
+    assertThrows[IndexOutOfBoundsException](dna.get(dna.size))
   }
 
 }

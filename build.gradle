@@ -90,7 +90,7 @@ dependencies {
     implementation("org.scala-lang:scala3-library_3:3.6.3")
     //compile 'org.scalatest:scalatest_2.12:3.0.5' 
 	//testImplementation("org.scalatest:scalatest_2.12:3.3.0-alpha.2") // closest match
-	implementation("org.scalatest:scalatest_3:3.3.0-alpha.2")
+	testImplementation("org.scalatest:scalatest_3:3.3.0-alpha.2")
 }
 
 task fatJar(type: Jar) {

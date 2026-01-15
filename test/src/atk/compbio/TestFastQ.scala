@@ -1,7 +1,8 @@
 package atk.compbio
 
+//import org.scalatest.Matchers._
 import org.scalatest.funsuite.*
-import org.scalatest.Matchers._
+
 import atk.compbio.fastq.FastQFile
 
 object TestFastQ {
