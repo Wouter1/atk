@@ -1,0 +1,107 @@
+@options
+@packages
+-classpath
+'/home/wouter/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/wouter/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/wouter/.m2/repository/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar:/home/wouter/.m2/repository/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar:/home/wouter/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar:/home/wouter/.m2/repository/com/lowagie/itext/2.1.5/itext-2.1.5.jar:/home/wouter/.m2/repository/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.jar:/home/wouter/.m2/repository/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.jar:/home/wouter/.m2/repository/javax/mail/javax.mail-api/1.5.2/javax.mail-api-1.5.2.jar:/home/wouter/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/wouter/.m2/repository/com/itextpdf/itextpdf/5.5.13.4/itextpdf-5.5.13.4.jar:/home/wouter/.m2/repository/org/scala-lang/scala3-library_3/3.6.3/scala3-library_3-3.6.3.jar:/home/wouter/.m2/repository/org/scala-lang/scala-library/2.13.15/scala-library-2.13.15.jar:/home/wouter/.m2/repository/org/scalatest/scalatest_3/3.3.0-alpha.2/scalatest_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-core_3/3.3.0-alpha.2/scalatest-core_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalactic/scalactic_3/3.3.0-alpha.2/scalactic_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-compatible/3.3.0-alpha.2/scalatest-compatible-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scala-lang/modules/scala-xml_3/2.4.0/scala-xml_3-2.4.0.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-featurespec_3/3.3.0-alpha.2/scalatest-featurespec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-flatspec_3/3.3.0-alpha.2/scalatest-flatspec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-freespec_3/3.3.0-alpha.2/scalatest-freespec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-funsuite_3/3.3.0-alpha.2/scalatest-funsuite_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-funspec_3/3.3.0-alpha.2/scalatest-funspec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-propspec_3/3.3.0-alpha.2/scalatest-propspec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-refspec_3/3.3.0-alpha.2/scalatest-refspec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-wordspec_3/3.3.0-alpha.2/scalatest-wordspec_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-diagrams_3/3.3.0-alpha.2/scalatest-diagrams_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-expectations_3/3.3.0-alpha.2/scalatest-expectations_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-matchers-core_3/3.3.0-alpha.2/scalatest-matchers-core_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-shouldmatchers_3/3.3.0-alpha.2/scalatest-shouldmatchers_3-3.3.0-alpha.2.jar:/home/wouter/.m2/repository/org/scalatest/scalatest-mustmatchers_3/3.3.0-alpha.2/scalatest-mustmatchers_3-3.3.0-alpha.2.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'/home/wouter/git/atk/src/main/java:/home/wouter/git/atk/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/wouter/git/atk/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'atk 1.1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/home/wouter/git/atk/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'atk 1.1.0 API'
+atk.compbio.tree
+atk.io
+atk.net
+atk.util
+edu.northwestern.at.utils
+edu.northwestern.at.utils.math.statistics
+edu.northwestern.at.utils.math.distributions
+edu.northwestern.at.utils.math.matrix
+edu.northwestern.at.utils.math
+edu.northwestern.at.utils.math.randomnumbers
+edu.northwestern.at.utils.math.rootfinders
+be.abeel.bioinformatics
+be.abeel.bioinformatics.dnaproperties
+be.abeel.jfreechart
+be.abeel.gui
+be.abeel.concurrency
+be.abeel.graphics
+be.abeel.io
+be.abeel.net
+be.abeel.util
+net.sf.image4j.io
+net.sf.image4j.codec.ico
+net.sf.image4j.codec.bmp
+net.sf.image4j.util
+org.arabidopsis.ahocorasick
+/home/wouter/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar = 1748954575338
+/home/wouter/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar = 1364931033000
+/home/wouter/.m2/repository/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar = 1318854198000
+/home/wouter/.m2/repository/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar = 1321860536000
+/home/wouter/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar = 1166794672000
+/home/wouter/.m2/repository/com/lowagie/itext/2.1.5/itext-2.1.5.jar = 1240264368000
+/home/wouter/.m2/repository/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.jar = 1207328733000
+/home/wouter/.m2/repository/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.jar = 1207328749000
+/home/wouter/.m2/repository/javax/mail/javax.mail-api/1.5.2/javax.mail-api-1.5.2.jar = 1399072546000
+/home/wouter/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar = 1220183138000
+/home/wouter/.m2/repository/com/itextpdf/itextpdf/5.5.13.4/itextpdf-5.5.13.4.jar = 1718282763000
+/home/wouter/.m2/repository/org/scala-lang/scala3-library_3/3.6.3/scala3-library_3-3.6.3.jar = 1736992580000
+/home/wouter/.m2/repository/org/scala-lang/scala-library/2.13.15/scala-library-2.13.15.jar = 1726860375000
+/home/wouter/.m2/repository/org/scalatest/scalatest_3/3.3.0-alpha.2/scalatest_3-3.3.0-alpha.2.jar = 1760620636000
+/home/wouter/.m2/repository/org/scalatest/scalatest-core_3/3.3.0-alpha.2/scalatest-core_3-3.3.0-alpha.2.jar = 1760620637000
+/home/wouter/.m2/repository/org/scalactic/scalactic_3/3.3.0-alpha.2/scalactic_3-3.3.0-alpha.2.jar = 1760618192000
+/home/wouter/.m2/repository/org/scalatest/scalatest-compatible/3.3.0-alpha.2/scalatest-compatible-3.3.0-alpha.2.jar = 1760620638000
+/home/wouter/.m2/repository/org/scala-lang/modules/scala-xml_3/2.4.0/scala-xml_3-2.4.0.jar = 1748338816000
+/home/wouter/.m2/repository/org/scalatest/scalatest-featurespec_3/3.3.0-alpha.2/scalatest-featurespec_3-3.3.0-alpha.2.jar = 1760620637000
+/home/wouter/.m2/repository/org/scalatest/scalatest-flatspec_3/3.3.0-alpha.2/scalatest-flatspec_3-3.3.0-alpha.2.jar = 1760620638000
+/home/wouter/.m2/repository/org/scalatest/scalatest-freespec_3/3.3.0-alpha.2/scalatest-freespec_3-3.3.0-alpha.2.jar = 1760620635000
+/home/wouter/.m2/repository/org/scalatest/scalatest-funsuite_3/3.3.0-alpha.2/scalatest-funsuite_3-3.3.0-alpha.2.jar = 1760620638000
+/home/wouter/.m2/repository/org/scalatest/scalatest-funspec_3/3.3.0-alpha.2/scalatest-funspec_3-3.3.0-alpha.2.jar = 1760620634000
+/home/wouter/.m2/repository/org/scalatest/scalatest-propspec_3/3.3.0-alpha.2/scalatest-propspec_3-3.3.0-alpha.2.jar = 1760620634000
+/home/wouter/.m2/repository/org/scalatest/scalatest-refspec_3/3.3.0-alpha.2/scalatest-refspec_3-3.3.0-alpha.2.jar = 1760620636000
+/home/wouter/.m2/repository/org/scalatest/scalatest-wordspec_3/3.3.0-alpha.2/scalatest-wordspec_3-3.3.0-alpha.2.jar = 1760620635000
+/home/wouter/.m2/repository/org/scalatest/scalatest-diagrams_3/3.3.0-alpha.2/scalatest-diagrams_3-3.3.0-alpha.2.jar = 1760620634000
+/home/wouter/.m2/repository/org/scalatest/scalatest-expectations_3/3.3.0-alpha.2/scalatest-expectations_3-3.3.0-alpha.2.jar = 1760620636000
+/home/wouter/.m2/repository/org/scalatest/scalatest-matchers-core_3/3.3.0-alpha.2/scalatest-matchers-core_3-3.3.0-alpha.2.jar = 1760620639000
+/home/wouter/.m2/repository/org/scalatest/scalatest-shouldmatchers_3/3.3.0-alpha.2/scalatest-shouldmatchers_3-3.3.0-alpha.2.jar = 1760620638000
+/home/wouter/.m2/repository/org/scalatest/scalatest-mustmatchers_3/3.3.0-alpha.2/scalatest-mustmatchers_3-3.3.0-alpha.2.jar = 1760620639000
+/home/wouter/git/atk/src/main/java = 1768487010897
+/home/wouter/git/atk/target/generated-sources/annotations = 1768490556250
+/home/wouter/git/atk/target/apidocs/member-search-index.js = 1768490591926
+/home/wouter/git/atk/target/apidocs/deprecated-list.html = 1768490591438
+/home/wouter/git/atk/target/apidocs/serialized-form.html = 1768490590270
+/home/wouter/git/atk/target/apidocs/jquery-ui.overrides.css = 1768490592394
+/home/wouter/git/atk/target/apidocs/module-search-index.js = 1768490591910
+/home/wouter/git/atk/target/apidocs/package-search-index.js = 1768490591914
+/home/wouter/git/atk/target/apidocs/help-doc.html = 1768490592382
+/home/wouter/git/atk/target/apidocs/index.html = 1768490591454
+/home/wouter/git/atk/target/apidocs/allclasses-index.html = 1768490591902
+/home/wouter/git/atk/target/apidocs/tag-search-index.js = 1768490591926
+/home/wouter/git/atk/target/apidocs/index-all.html = 1768490592362
+/home/wouter/git/atk/target/apidocs/overview-summary.html = 1768490592366
+/home/wouter/git/atk/target/apidocs/script.js = 1768490592386
+/home/wouter/git/atk/target/apidocs/element-list = 1768490589798
+/home/wouter/git/atk/target/apidocs/stylesheet.css = 1768490592386
+/home/wouter/git/atk/target/apidocs/overview-tree.html = 1768490591426
+/home/wouter/git/atk/target/apidocs/constant-values.html = 1768490590190
+/home/wouter/git/atk/target/apidocs/type-search-index.js = 1768490591914
+/home/wouter/git/atk/target/apidocs/allpackages-index.html = 1768490591910
+/home/wouter/git/atk/target/apidocs/search.js = 1768490592390
