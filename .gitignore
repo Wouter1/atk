@@ -16,3 +16,4 @@ build
 /tmp.txt
 /tmp2.txt
 /.url-cache
+/target/

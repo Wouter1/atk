@@ -73,10 +73,8 @@
 		<dependency>
 			<groupId>org.scalatest</groupId>
 			<artifactId>scalatest_3</artifactId>
-			<version>3.3.0-alpha.2</version>
+        	<version>3.2.18</version>
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -139,6 +137,19 @@
 			        </executions>
 		      </plugin>
 		
+		      <plugin>
+		        <groupId>org.scalatest</groupId>
+		        <artifactId>scalatest-maven-plugin</artifactId>
+		        <version>2.2.0</version>
+		        <executions>
+		          <execution>
+		            <goals>
+		              <goal>test</goal>
+		            </goals>
+		          </execution>
+		        </executions>
+		      </plugin>
+      
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
