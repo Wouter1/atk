@@ -1,5 +1,4 @@
-atk
-===
+# atk
 
 Abeel ToolKit -- a set of quite useful java and scala classes, objects and traits.
 
@@ -8,13 +7,29 @@ Some classes may have more specific license than the complete package, please re
 
 Individual tools may have specific licenses to accommodate library and/or package licenses
 
+# Maven Dependency
+You can use this from maven with the following dependency.
 
-Eclipse setup
-===
-Add scala library (2.12.3)
-Add Java runtime (1.11)
+```
+	    <dependency>
+		    <groupId>be.abeel</groupId>
+		    <artifactId>atk</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+```
 
+and with the following repository
 
-Nightly builds
-===
-https://abeellab.org/jenkins/atk
+```
+	<repositories>
+		<repository>
+			<id>artifactory.ewi.tudelft.nl</id>
+			<url>https://artifactory.ewi.tudelft.nl/artifactory/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+```
+
