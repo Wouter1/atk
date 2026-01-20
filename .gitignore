@@ -18,3 +18,4 @@ build
 /.url-cache
 /target/
 /.project
+/.settings/
