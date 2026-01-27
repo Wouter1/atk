@@ -4,7 +4,7 @@
 name: Maven Package
 
 on:
-	workflow-dispatch:
+  workflow-dispatch:
 
 jobs:
   build:
