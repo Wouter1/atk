@@ -8,13 +8,15 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import org.junit.Test;
 
 import be.abeel.graphics.GraphicsFileExport;
 import be.abeel.jfreechart.JFreeChartWrapper;
 
-public class ExportJFreeChart {
+public class ExportJFreeChartTest {
 
-    public static void main(String[] args) {
+	@Test
+    public  void testMakeChart() {
         XYSeries ser = new XYSeries("Sample");
 
         ser.add(0, 1);
