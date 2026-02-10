@@ -21,6 +21,16 @@ The ATK library contains a large collection of small tools:
 * jfreechart: wrapper for JFreeChart
 * util: alternatives for hashmap, alternative RNG
 
+
+
+## Additional libraries
+This library also contains hard copies of other libraries, which are not available on an external artifactory:
+
+* edu.northwestern.at.utils which is a math toolbox
+
+* org.arabidopsis.ahocorasick which is a string searching automaton.
+
+
 # Maven Dependency
 You can use this from maven with the following dependency.
 
@@ -46,11 +56,3 @@ and with the following repository
 	</repositories>
 ```
 
-
-
-## Additional libraries
-This library also contains hard copies of other libraries, which are not available on an external artifactory:
-
-* edu.northwestern.at.utils which is a math toolbox
-
-* org.arabidopsis.ahocorasick which is a string searching automaton.
