@@ -1,8 +1,9 @@
 package edu.northwestern.at.utils.math.distributions;
 
+import edu.northwestern.at.utils.math.Constants;
+
 /*	Please see the license information at the end of this file. */
 
-import edu.northwestern.at.utils.math.*;
 
 /**	Gamma distribution functions.
  */

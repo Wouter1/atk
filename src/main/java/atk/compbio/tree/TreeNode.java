@@ -36,7 +36,6 @@ package atk.compbio.tree;
 
 import java.util.*;
 
-import edu.northwestern.at.utils.StringUtils;
 
 /**
  * A class representing a node of a (phylogenetic) tree. The tree that this node
