@@ -5,8 +5,6 @@ package be.abeel.util;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import be.abeel.concurrency.DaemonThread;
 
@@ -19,11 +17,8 @@ import be.abeel.concurrency.DaemonThread;
  * @author jrobinso
  * @author Thomas Abeel
  */
+@SuppressWarnings("serial")
 public class LRUCache<K, V> extends LinkedHashMap<K, V> {
-
-	private static final long serialVersionUID = 3108325620729125294L;
-
-	private Logger log = Logger.getLogger(LRUCache.class.getCanonicalName());
 
 	private int maxEntries = 100;
 
@@ -36,19 +31,17 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
 		DaemonThread dt = new DaemonThread(new Runnable() {
 			private long ttl = survival;
 
+			@Override
 			public void run() {
-				while(true){
-					if(System.currentTimeMillis()-reset>ttl){
+				while (true) {
+					if (System.currentTimeMillis() - reset > ttl) {
 						clear();
-				
 					}
-					
+
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-						log.log(Level.INFO,"LRU cleaner interrupted",e);
+						// ignore, will try again next second
 					}
 				}
 
@@ -63,11 +56,6 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.util.LinkedHashMap#get(java.lang.Object)
-	 */
 	@Override
 	public V get(Object key) {
 		reset = System.currentTimeMillis();
@@ -79,7 +67,7 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
 		if (size() > maxEntries) {
 			return true;
 		} else if (getAvailableMemoryFraction() < 0.1) {
-			log.info("Memory low.  Free cache entry");
+			// log.info("Memory low. Free cache entry");
 			return true;
 		} else {
 			return false;
@@ -91,7 +79,8 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
 		long maxMemory = runtime.maxMemory();
 		long allocatedMemory = runtime.totalMemory();
 		long freeMemory = runtime.freeMemory();
-		return (double) ((freeMemory + (maxMemory - allocatedMemory))) / maxMemory;
+		return (double) ((freeMemory + (maxMemory - allocatedMemory)))
+				/ maxMemory;
 
 	}
 }
